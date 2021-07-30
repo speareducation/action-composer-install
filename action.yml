@@ -34,6 +34,7 @@ runs:
 
     - id: composer-validate
       name: Validate composer.json and composer.lock
+      shell: bash
       run: composer validate | tee "${{ inputs.valiation-results-path }}"
 
     - id: composer-auth
@@ -54,4 +55,5 @@ runs:
 
     - id: composer-install
       name: Composer Install
+      shell: bash
       run: composer install --prefer-dist
