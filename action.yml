@@ -38,7 +38,6 @@ runs:
       run: composer validate | tee "${{ inputs.valiation-results-path }}"
 
     - id: composer-auth
-      if: inputs.composer-api-key
       name: Setup Composer Auth
       uses: speareducation/action-setup-composer-auth@main
       with:
